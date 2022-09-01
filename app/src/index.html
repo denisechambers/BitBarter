@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BitBarter</title>
+  </head>
+  <style>
+    input {
+      display: block;
+      margin-bottom: 12px;
+    }
+  </style>
+  <body>
+    <h1>BitBarter</h1>
+
+    <label for="title">Title:</label>
+    <input type="text" id="title"></input>
+
+    <label for="description">Description:</label>
+    <input type="text" id="description"></input>
+
+    <br/>
+    <label for="price">Price:</label>
+    <input type="text" id="price"></input>
+
+
+    <button onclick="App.createJob()">Create Contract</button></br></br>code: openJobForProvider(title, description, this.provider).send({
+    from: this.customer,
+    value: priceInWei,
+    gas: 299999,
+    gasPrice: '300000'
+    });</br></br>
+    <button onclick="App.abort()">Abort</button> code: abort().send({ from: this.customer })</br></br>
+    <button onclick="App.accept()">Accept</button> code: acceptJob().send({ from: this.provider }) </br></br>
+
+    <button onclick="App.confirmReceived()">Customer confirmation</button>code: : confirmReceived.send({ from: this.customer })</br></br>
+    <button onclick="App.imposterConfirmReceived()">Imposter confirmation</button>code: confirmReceived.send({ from: this.imposter })</br></br>
+    </br></br>
+
+    <p id="status"></p>
+
+    <script src="index.js"></script>
+  </body>
+</html>
